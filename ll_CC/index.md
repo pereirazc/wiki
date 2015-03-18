@@ -3,9 +3,9 @@
 ##Métodos de utField
 
 ####`addAttribute(name: string): utAttribute;`
-adiciona atributo à tag
+> adiciona atributo à tag
 ####`addField(name: string): utField;`
-adds child field to tag
+> adds child field to tag
 ####`findField(name: string): utField;`
 ####`getAttributeByName(name: string): utAttribute;`
 ####`getFieldByName(name: string): utField;`
