@@ -2,10 +2,10 @@
 
 Métodos de utField
 ======
-###`addAttribute(name: string): utAttribute;`
-------
-###addField(name: string): utField;
-------
+####`addAttribute(name: string): utAttribute;`
+adiciona atributo à tag
+####`addField(name: string): utField;`
+adiciona atributo à tag
 ####findField(name: string): utField;
 ####getAttributeByName(name: string): utAttribute;
 ####getFieldByName(name: string): utField;
