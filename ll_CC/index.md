@@ -1,19 +1,80 @@
-# It works! ;-)
+# Conexo XML (utField) API
 
-
-## Section 1
-
-Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
-
-
-## Section 2
-
-Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-
-Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+utField unit utuMessage
+Dada a classe Livro definida abaixo:
+~~~pascal
+type
+  Livro = class(acPersistentObject)
+  private
+    FTitulo: acString;
+    FAutor: acString;
+    FEditora: acString;
+    fAnoPublicacao: acInt;
+  published
+    property Titulo: acString read FTitulo write FTitulo;
+    property Autor: acString read FAutor write FAutor;
+    property Editora: acString read FEditora write FEditora;
+    property AnoPublicacao: acInt read FAnoPublicacao write FAnoPublicacao;
+end;
+~~~
 
 ~~~xml
-  <XML>
-    <Livro teste="X"></Livro>
-  </XML>
+<Livros>
+    <Livro Autor="Antoine Saint-Exupéry" Editora="Agir" AnoPublicacao="1943">O Pequeno Principe</Livro>
+    <Livro Autor="Thomas Piketty" Editora="Intrínseca" AnoPublicacao="2014">O Capital no Século XXI</Livro>
+    <Livro Autor="Johanna Basford" Editora="Sextante" AnoPublicacao="1911">Jardim Secreto</Livro>
+</Livros>
+~~~
+
+##Acessando a Estrutura XML, Tags e Atributos
+~~~pascal
+var
+    lEnum: acEnumerator;
+    lXML: utField;
+    lFieldLivro: utField;
+begin
+    lEnum := lXML.getFieldByName('Livros').getFieldEnumerator;
+    try
+        while not lEnum.EOL do
+        begin
+            lFieldLivro := lEnum.Current as utField;
+            lLivro := Livro.CreateNew(Self.Session);
+            lLivro.Titulo.Value         := lFieldLivro.asString;
+            lLivro.Autor.Value          := lFieldLivro.AttributeByName('Autor').AsString;
+            lLivro.Editora.Value        := lFieldLivro.AttributeByName('Editora').AsString;
+            lLivro.AnoPublicacao.Value  := lFieldLivro.AttributeByName('AnoPublicacao').AsInt;
+            lLivros.Add(lLivro);
+            lEnum.MoveNext;
+        end;
+    finally
+        lEnum.Free;
+    end;
+~~~
+
+##Criando uma documento XML
+Supondo uma lista de objetos Livro como definida anteriormente
+~~~pascal
+var
+    lEnum: acEnumerator;
+    lLivros: aPersistentcObjectList;
+    lLivro: Livro;
+    lFieldLivros,
+    lFieldLivro: utField;
+begin
+    lEnum := lLivros.getEnumerator;
+    try
+        while not lEnum.EOL do
+        begin
+            lFieldLivro := lEnum.Current as utField;
+            lLivro := Livro.CreateNew(Self.Session);
+            lLivro.Titulo.Value         := lFieldLivro.asString;
+            lLivro.Autor.Value          := lFieldLivro.AttributeByName('Autor').AsString;
+            lLivro.Editora.Value        := lFieldLivro.AttributeByName('Editora').AsString;
+            lLivro.AnoPublicacao.Value  := lFieldLivro.AttributeByName('AnoPublicacao').AsInt;
+            lLivros.Add(lLivro);
+            lEnum.MoveNext;
+        end;
+    finally
+        lEnum.Free;
+    end;
 ~~~
