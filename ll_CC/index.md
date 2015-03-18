@@ -18,6 +18,10 @@
 > adds child field to tag
 
 
+
+
+##Acessando Documento XML
+---
 utField unit utuMessage
 Dada a classe Livro definida abaixo:
 
@@ -47,7 +51,6 @@ end;
 </Livros>
 ~~~
 
-##Acessando Documento XML
 ~~~
 var
     lEnum: acEnumerator;
