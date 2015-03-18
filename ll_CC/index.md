@@ -1,16 +1,21 @@
-# Conexo XML (utField) API 2
+# Conexo XML (utField) API
 
 ##Metodos de utField
 
-####`addAttribute(name: string): utAttribute;`
+#####`addAttribute(name: string): utAttribute;`
 > adiciona atributo C  tag
-####`addField(name: string): utField;`
+
+#####`addField(name: string): utField;`
 > adds child field to tag
 
-####`findField(name: string): utField;`
-####`getAttributeByName(name: string): utAttribute;`
-####`getFieldByName(name: string): utField;`
+#####`findField(name: string): utField;`
+> adds child field to tag
 
+#####`getAttributeByName(name: string): utAttribute;`
+> adds child field to tag
+
+#####`getFieldByName(name: string): utField;`
+> adds child field to tag
 
 
 utField unit utuMessage
