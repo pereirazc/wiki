@@ -3,7 +3,7 @@
 utField unit utuMessage
 Dada a classe Livro definida abaixo:
 
-[gimmick:yuml]([User|-Título+;Surname;+HashedPassword;-Salt|])
+[gimmick:yuml]([Livro|-Título:acString;-Autor:acString;-Editora:acString;-AnoPublicacao:acInt|])
 
 ~~~
 type
