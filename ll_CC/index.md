@@ -1,7 +1,7 @@
 # Conexo XML (utField) API
 
 ##Metodos de utField
-
+---
 #####`addAttribute(name: string): utAttribute;`
 > adiciona atributo C  tag
 
