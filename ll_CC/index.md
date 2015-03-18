@@ -2,16 +2,13 @@
 
 ##Métodos de utField
 
-~~~java
-addAttribute(name: string): utAttribute;
-~~~
-~~~
-  Adiciona um atributo à Tag
-~~~
-addField(name: string): utField;
-findField(name: string): utField;
-getAttributeByName(name: string): utAttribute;
-getFieldByName(name: string): utField;
+
+####addAttribute(name: string): utAttribute;
+
+####addField(name: string): utField;
+####findField(name: string): utField;
+####getAttributeByName(name: string): utAttribute;
+####getFieldByName(name: string): utField;
 
 
 
