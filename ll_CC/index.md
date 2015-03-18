@@ -1,18 +1,14 @@
 # Conexo XML (utField) API
 
-Métodos de utField
-======
+##Métodos de utField
+
 ####`addAttribute(name: string): utAttribute;`
 adiciona atributo à tag
 ####`addField(name: string): utField;`
-adiciona atributo à tag
-####findField(name: string): utField;
-####getAttributeByName(name: string): utAttribute;
-####getFieldByName(name: string): utField;
-
-
-
-
+adds child field to tag
+####`findField(name: string): utField;`
+####`getAttributeByName(name: string): utAttribute;`
+####`getFieldByName(name: string): utField;`
 
 
 
