@@ -26,7 +26,7 @@ end;
 </Livros>
 ~~~
 
-##Acessando a Estrutura XML, Tags e Atributos
+##Acessando Documento XML
 ~~~
 var
     lEnum: acEnumerator;
@@ -51,7 +51,7 @@ begin
     end;
 ~~~
 
-##Criando uma documento XML
+##Criando Documento XML
 Supondo uma lista de objetos Livro como definida anteriormente
 ~~~
 var
