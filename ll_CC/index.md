@@ -1,11 +1,11 @@
 # Conexo XML (utField) API
 
-##Métodos de utField
-----------------------------
+Métodos de utField
+======
 ###addAttribute(name: string): utAttribute;
-----------------------------
+------
 ###addField(name: string): utField;
-----------------------------
+------
 ####findField(name: string): utField;
 ####getAttributeByName(name: string): utAttribute;
 ####getFieldByName(name: string): utField;
