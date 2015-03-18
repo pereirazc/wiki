@@ -1,8 +1,9 @@
 # Conexo XML (utField) API
 
-##Métodos
-~~~
+##Métodos de utField
+~~~java
 addAttribute(name: string): utAttribute;
+~~~
   Adiciona um atributo à Tag
 ~~~
 addField(name: string): utField;
