@@ -2,7 +2,7 @@
 
 utField unit utuMessage
 Dada a classe Livro definida abaixo:
-~~~pascal
+~~~
 type
   Livro = class(acPersistentObject)
   private
@@ -27,7 +27,7 @@ end;
 ~~~
 
 ##Acessando a Estrutura XML, Tags e Atributos
-~~~pascal
+~~~
 var
     lEnum: acEnumerator;
     lXML: utField;
@@ -53,7 +53,7 @@ begin
 
 ##Criando uma documento XML
 Supondo uma lista de objetos Livro como definida anteriormente
-~~~pascal
+~~~
 var
     lEnum: acEnumerator;
     lLivros: aPersistentcObjectList;
