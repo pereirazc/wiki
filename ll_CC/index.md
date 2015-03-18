@@ -1,10 +1,9 @@
 # Conexo XML (utField) API
 
-##Métodos de utField
+##MC)todos de utField
 
 ####`addAttribute(name: string): utAttribute;`
-> adiciona atributo à tag
-
+> adiciona atributo C  tag
 ####`addField(name: string): utField;`
 > adds child field to tag
 
@@ -17,7 +16,7 @@
 utField unit utuMessage
 Dada a classe Livro definida abaixo:
 
-[gimmick:yuml]([Livro|-Título:acString;-Autor:acString;-Editora:acString;-AnoPublicacao:acInt|])
+[gimmick:yuml]([Livro|-TC-tulo:acString;-Autor:acString;-Editora:acString;-AnoPublicacao:acInt|])
 
 ~~~
 type
@@ -37,8 +36,8 @@ end;
 
 ~~~xml
 <Livros>
-    <Livro Autor="Antoine Saint-Exupéry" Editora="Agir" AnoPublicacao="1943">O Pequeno Principe</Livro>
-    <Livro Autor="Thomas Piketty" Editora="Intrínseca" AnoPublicacao="2014">O Capital no Século XXI</Livro>
+    <Livro Autor="Antoine Saint-ExupC)ry" Editora="Agir" AnoPublicacao="1943">O Pequeno Principe</Livro>
+    <Livro Autor="Thomas Piketty" Editora="IntrC-nseca" AnoPublicacao="2014">O Capital no SC)culo XXI</Livro>
     <Livro Autor="Johanna Basford" Editora="Sextante" AnoPublicacao="1911">Jardim Secreto</Livro>
 </Livros>
 ~~~
