@@ -1,5 +1,21 @@
 # Conexo XML (utField) API
 
+##Métodos
+~~~
+addAttribute(name: string): utAttribute;
+  Adiciona um atributo à Tag
+~~~
+addField(name: string): utField;
+findField(name: string): utField;
+getAttributeByName(name: string): utAttribute;
+getFieldByName(name: string): utField;
+
+
+
+
+
+
+
 utField unit utuMessage
 Dada a classe Livro definida abaixo:
 
