@@ -2,9 +2,9 @@
 
 ##Métodos de utField
 ----------------------------
-####addAttribute(name: string): utAttribute;
+###addAttribute(name: string): utAttribute;
 ----------------------------
-####addField(name: string): utField;
+###addField(name: string): utField;
 ----------------------------
 ####findField(name: string): utField;
 ####getAttributeByName(name: string): utAttribute;
